@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ประวัติส่วนตัว</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body onload="setAge()">
+
+  <div class="container">
+    <div class="page-title">ประวัติส่วนตัว</div>
+    
+    <div class="grid-container">
+      <div class="grid-item">
+        <div class="text-wrapper">
+          <span class="label">ชื่อ :</span>
+          <span class="text name">ศุภณัฐ แซ่เตีย</span>
+        </div>
+  
+        <div class="text-wrapper">
+          <span class="label">ชื่อเล่น :</span>
+          <span class="text">ณัฐ</span>
+        </div>
+
+        <div class="text-wrapper">
+          <span class="label">วันเกิด :</span>
+          <span class="text">28 พฤศจิกายน 2002</span>
+        </div>
+
+        <div class="text-wrapper">
+          <span class="label">อายุ :</span>
+          <span class="text" id="age"></span>
+        </div>
+      </div>
+  
+      <div class="grid-item">
+        <div class="profile-img"></div>
+      </div>
+    </div>
+    
+    <div class="head">เกี่ยวกับฉัน</div>
+    <div class="text-box">
+      สวัสดีครับผมชื่อณัฐ ในช่วง Covid-19 ผมได้รับมอบหมายให้ทำระบบลงทะเบียน โดยผมอยากให้ผู้ลงสามารถค้นหาข้อมูลของตัวเองได้
+      เพื่อที่จะได้ไม่ต้องกรอกข้อมูลของตัวเองใหม่ทั้งหมด ผมจึงได้เริ่มต้นศึกษาวิธีการทำจากอินเตอร์เน็ต จนสามารถทำได้สำเร็จ 
+      และงานในครั้งนี้ทำให้ผมรู้สึกชอบในการเขียนเว็บไซต์ ผมจึงได้ศึกษาหาความรู้เพื่อต่อยอดจนมาตลอด 
+      โดยในปัจจุบันผมสามารถเขียนเว็บไซต์เพื่อทำระบบต่าง ๆ ได้ เช่น ระบบลงทะเบียนโดยใช้ QR Code 
+      โดยใช้ HTML CSS JS และ Google Script + Google Sheet หรือ Firebase (RTDB & auth) 
+    </div>
+
+    <div class="head">ผลงานที่เคยทำ</div>
+    <ul>
+      <li>ระบบลงทะเบียนโดยใช้ QR Code</i></li>
+      <li>ระบบฐานข้อมูลสมาชิก</i></li>
+      <li>ระบบเก็บบันทึกยอดต่าง ๆ</i></li>
+    </ul>
+
+    <div class="head">งานอดิเรก</div>
+    <ul>
+      <li>ดูหนัง / ฟังเพลง</li>
+      <li>อ่านหนังสือ (นิยาย + วรรณกรรมเยาวชน)</li>
+      <li>DIY อุปกรณ์อิเล็กทรอนิกส์ และของใช้ต่าง ๆ</li>
+      <li>ควบคุมระบบเสียง PA</li>
+    </ul>
+
+    <div class="head">คติประจำใจ</div>
+    <div class="quto">
+      “การไม่พ่ายแพ้ก็คือความสุข ไม่ว่าจะเกิดอะไรขึ้น <b>‘จงอย่าพ่ายแพ้’</b> แม้จะสู้อยู่เพียงลำพังก็จงสดใส ผู้ที่มีความเข้มแข็งเช่นนี้จะมีความสุข”
+    </div>
+
+    <div class="head">ช่องทางการติดต่อ</div>
+    <div class="text-wrapper">
+      <span class="label">อีเมล :</span>
+      <span class="text">6505000270@rumail.ru.ac.th</span>
+    </div>
+  </div>
+  
+  <script>
+
+    function setAge() {
+      const cur_date = new Date();
+      const birth_date = new Date('2002-11-28');
+      const age = cur_date.getFullYear() - birth_date.getFullYear();
+      
+      document.getElementById("age").innerHTML = `${age} ปี`
+    }
+
+  </script>
+</body>
+</html>

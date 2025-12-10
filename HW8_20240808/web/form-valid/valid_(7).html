@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation Example 13</title>
+</head>
+
+<body>
+  <form id="form13" onsubmit="return validateForm13()">
+    <label for="name13">Name:</label><br>
+    <input type="text" id="name13" name="name"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <p id="error-message13" style="color: red;"></p>
+  <script>
+    function validateForm13() {
+      let name = document.getElementById
+
+        ("name13").value;
+      let errorMessage = document.getElementById("error-message13");
+      errorMessage.innerHTML = "";
+      let re = /^[a-zA-Z\s]+$/;
+      if (name === "") {
+        errorMessage.innerHTML = "Name is required.";
+        return false;
+      }
+      if (!re.test(name)) {
+        errorMessage.innerHTML = "Name must not contain numbers.";
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+
+</html>

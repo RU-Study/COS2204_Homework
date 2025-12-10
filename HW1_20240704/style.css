@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Athiti', sans-serif;
+  box-sizing: border-box;
+  font-size: 24px;
+  font-weight: 500;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+:root {
+  --plCl1: #1C3879;
+  --plCl2: #264CA3;
+  --plCl3: #607EAA;
+  --plCl4: #d4e1f5;
+  --plCl5: #F9F5EB;
+  --main_padding: 60px;
+}
+
+body {
+  background-color: var(--plCl5);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  padding: var(--main_padding);
+  width: 100%;
+  max-width: 1200px;
+}
+
+.page-title {
+  border-bottom: 2px solid var(--plCl2);
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--plCl2);
+}
+
+.grid-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: calc(100% - 300px) 250px;
+  gap: 20px 50px;
+}
+
+.text-wrapper .label {
+  font-size: .8em;
+  font-weight: 600;
+  color: var(--plCl3);
+}
+
+.text-wrapper .text {
+  font-weight: 600;
+  font-size: 1.1em;
+  color: var(--plCl1);
+}
+
+.text-wrapper .name {
+  font-size: 1.3em;
+}
+
+.head {
+  margin-top: 20px;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: var(--plCl3);
+  text-decoration: underline;
+}
+
+.text-box {
+  text-indent: var(--main_padding);
+  text-align: justify;
+}
+
+.head ~ .text-wrapper .text {
+  font-size: 1em;
+  color: #000;
+}
+
+ul {
+  list-style: circle;
+}
+
+li {
+  margin-left: 30px;
+}
+
+b {
+  font-weight: 600;
+}
+
+.profile-img {
+  width: 250px;
+  height: 250px;
+  background-image: url('./me.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px;
+}
+
+/* Todo: Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--plCl3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--plCl1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--plCl2);
+}
+
+
+@media only screen and (max-width: 991px) {
+  * {
+    font-size: 22px;
+  }
+
+  :root {
+    --main_padding: 30px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  * {
+    font-size: 20px;
+  }
+
+  :root {
+    --main_padding: 20px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-container :first-child {
+    order: 2;
+  }
+
+  .profile-img {
+    margin: 0 auto;
+  }
+}

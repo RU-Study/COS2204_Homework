@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation Example 7</title>
+</head>
+
+<body>
+  <form id="form7" onsubmit="return validateForm7()">
+    <label for="name7">Name:</label><br>
+    <input type="text" id="name7" name="name"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <p id="error-message7" style="color: red;"></p>
+  <script>
+    function validateForm7() {
+      let name = document.getElementById("name7").value;
+      let errorMessage = document.getElementById("error-message7");
+      errorMessage.innerHTML = "";
+      let re = /^[a-zA-Z]+$/;
+      if (name === "") {
+        errorMessage.innerHTML = "Name is required.";
+        return false;
+      }
+      if (!re.test(name)) {
+        errorMessage.innerHTML = "Name must contain only letters.";
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+
+</html>

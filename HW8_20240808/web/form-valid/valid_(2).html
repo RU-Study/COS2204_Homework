@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation Example 3</title>
+</head>
+
+<body>
+  <form id="form3" onsubmit="return validateForm3()">
+    <label for="password3">Password:</label><br>
+    <input type="password" id="password3" name="password"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <p id="error-message3" style="color: red;"></p>
+  <script>
+    function validateForm3() {
+      let password = document.getElementById("password3").value;
+      let errorMessage = document.getElementById("error-message3");
+      errorMessage.innerHTML = "";
+      if (password === "") {
+        errorMessage.innerHTML = "Password is required.";
+        return false;
+      }
+      if (password.length < 8) {
+        errorMessage.innerHTML = "Password must be at least 8 characters long.";
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+
+</html>

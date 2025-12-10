@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation Example 16</title>
+</head>
+
+<body>
+  <form id="form16" onsubmit="return validateForm16()">
+    <label for="url16">Website URL:</label><br>
+    <input type="text" id="url16" name="url"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <p id="error-message16" style="color: red;"></p>
+  <script>
+    function validateForm16() {
+      let url = document.getElementById("url16").value;
+      let errorMessage = document.getElementById("error-message16");
+      errorMessage.innerHTML = "";
+      let re = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/;
+      if (url === "") {
+        errorMessage.innerHTML = "URL is required.";
+        return false;
+      }
+      if (!re.test(url)) {
+        errorMessage.innerHTML = "URL is not valid.";
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+
+</html>

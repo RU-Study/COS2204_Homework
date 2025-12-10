@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation Example 4</title>
+</head>
+
+<body>
+  <form id="form4" onsubmit="return validateForm4()">
+    <label for="age4">Age:</label><br>
+    <input type="text" id="age4" name="age"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <p id="error-message4" style="color: red;"></p>
+  <script>
+    function validateForm4() {
+      let age = document.getElementById("age4").value;
+      let errorMessage = document.getElementById("error-message4");
+      errorMessage.innerHTML = "";
+      if (age === "") {
+        errorMessage.innerHTML = "Age is required.";
+        return false;
+      }
+      if (isNaN(age)) {
+        errorMessage.innerHTML = "Age must be a number.";
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+
+</html>

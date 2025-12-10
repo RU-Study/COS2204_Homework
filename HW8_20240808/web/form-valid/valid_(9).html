@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation Example 15</title>
+</head>
+
+<body>
+  <form id="form15" onsubmit="return validateForm15()">
+    <label for="dob15">Date of Birth:</label><br>
+    <input type="text" id="dob15" name="dob" placeholder="yyyy-mm-dd"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <p id="error-message15" style="color: red;"></p>
+  <script>
+    function validateForm15() {
+      let dob = document.getElementById("dob15").value;
+      let errorMessage = document.getElementById("error-message15");
+      errorMessage.innerHTML = "";
+      let re = /^\d{4}-\d{2}-\d{2}$/;
+      if (dob === "") {
+        errorMessage.innerHTML = "Date of birth is required.";
+        return false;
+      }
+      if (!re.test(dob)) {
+        errorMessage.innerHTML = "Date of birth must be in the format yyyy-mm-dd.";
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+
+</html>

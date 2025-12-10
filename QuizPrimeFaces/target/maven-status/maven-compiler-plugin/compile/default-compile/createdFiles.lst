@@ -1,0 +1,15 @@
+product\Order.class
+com\cos2204\quizprimefaces\resources\JakartaEE10Resource.class
+product\ProductService.class
+views\RemoteValidationView.class
+views\PolarChart.class
+product\Place.class
+product\Product.class
+views\ConfirmView.class
+product\InventoryStatus.class
+views\ClockView.class
+views\TabbedView.class
+views\CascadeSelectView.class
+views\CarouselView.class
+views\ColorView.class
+com\cos2204\quizprimefaces\JakartaRestConfiguration.class

@@ -1,0 +1,46 @@
+<HTML>
+  <BODY>
+    <form action="savedata.php" method="get" name="F1">
+      <fieldset>
+        <legend>Personal data</legend>
+        Name :
+        <input type="text" name="txt_name" size="20" maxlength="30" /> <br />
+
+        Sex :
+        <input type="radio" name="sex" value="M" /> Male
+        <input type="radio" name="sex" value="F" /> Female <br />
+
+        Age :
+        <select name="lst_age">
+          <option value="" >-</option>
+          <option value="1" >1-10</option>
+          <option value="2">11-20</option>
+          <option value="3">21-30</option>
+          <option value="4">31-40</option>
+          <option value="5">>40</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your interesting</legend>
+        Section :
+        <input type="checkbox" name="chk1" value="Yes" /> HTML
+        <input type="checkbox" name="chk2" value="Yes" /> CSS
+        <input type="checkbox" name="chk3" value="Yes" /> JAVASCRIPT
+        <br />
+
+        Score for this website :
+        <input type="text" name="txt_score" size="20" maxlength="30" /><br />
+
+        Comment : <br />
+        <textarea wrap="virtual" name="txt_comment" rows="6" cols="20">
+        </textarea>
+      </fieldset>
+
+      <p align="center">
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+      </p>
+    </form>
+  </BODY>
+</HTML>

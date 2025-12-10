@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation Example 9</title>
+</head>
+
+<body>
+  <form id="form9" onsubmit="return validateForm9()">
+    <label for="password9">Password:</label><br>
+    <input type="password" id="password9" name="password"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <p id="error-message9" style="color: red;"></p>
+  <script>
+    function validateForm9() {
+      let password = document.getElementById("password9").value;
+      let errorMessage = document.getElementById("error-message9");
+      errorMessage.innerHTML = "";
+      let re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+      if (password === "") {
+        errorMessage.innerHTML = "Password is required.";
+        return false;
+      }
+      if (!re.test(password)) {
+        errorMessage.innerHTML = "Password must contain at least one uppercase letter, one lowercase letter, and one number.";
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+
+</html>
